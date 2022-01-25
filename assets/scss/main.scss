@@ -1,10 +1,188 @@
-/* === COLOR VARIABELS === */
-$purple: #563AD6;
-$aqua: #3ABAD6;
-$navy: #02044A;
-$white: #fff;
-$sofpur: #EAEAF4;
-$darpur: #777790;
-$medpur: #B4B5C9;
-$lilpur: #F9F9FB;
+@use "colors";
+@use "typography";
+@use "layout";
+@use "components/button";
+@use "components/card";
 
+/* === RESET CSS === */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: typography.$font;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* === REUSABLE CLASS === */
+.title{
+    color: colors.$navy;
+    font-weight: map-get($map: typography.$font-weights, $key: "semibold");
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.description{
+    color: colors.$gray;
+    font-size: 1.2rem;
+    font-weight: map-get($map: typography.$font-weights, $key: "regular");
+}
+
+.btn-primary {
+    @include button.btn($bg-color: colors.$purple, $text-color: colors.$white, $font-weight: map-get($map: typography.$font-weights, $key: "semibold"));
+}
+
+.btn-secondary {
+    @include button.btn($bg-color: colors.$sofpur, $text-color: colors.$darpur, $font-weight: map-get($map: typography.$font-weights, $key: "medium"));
+}
+
+/* === LAYOUT === */
+.container{
+    max-width: 1124px;
+    width: 100%;
+    margin: auto;
+}
+
+/* === NAVBAR === */
+.navbar{
+    margin-top: 30px;
+    .container {
+        @include layout.flex($justify: space-between);
+    }
+
+    &-items{
+        display: flex;
+    }
+
+    &-item{
+        margin: 0 1.35rem;
+    }
+
+    &-link{
+        color: colors.$navy;
+        font-weight: map-get($map: typography.$font-weights, $key: "regular");
+        font-size: 1.2rem;
+
+        &.active{
+            font-weight: map-get($map: typography.$font-weights, $key: "medium");
+            color: colors.$purple;
+        }
+    }
+}
+
+/* === SALES === */
+.sales{
+    padding: 50px 0;
+    .container {
+        @include layout.flex($justify: space-between, $align: center);
+        padding-right: 1.5rem;
+    }
+
+    .title{
+        margin-top: -15px;
+    }
+
+   .description{
+       margin-bottom: 40px;
+       line-height: 1.5;
+   }
+
+   .btn-primary{
+        margin-right: 15px;
+   }
+}
+
+/* === BRAND === */
+.brand{
+    @include layout.flex($justify: center);
+    padding: 45px 0;
+
+    &-logos{
+        width: 50%;
+    }
+}
+
+/* === PRICING === */
+.pricing{
+    background-color: colors.$lilpur;
+    padding: 70px 0;
+    &-header{
+        @include layout.flex($align: center, $direction: column);
+    }
+
+    .description{
+        text-align: center;
+    }
+
+    .cards{
+        width: 53%;
+        margin: 80px auto 0;
+
+        @include layout.flex($justify: space-between);
+
+        .basic-card{
+            @include card.init($bg-color: colors.$white);
+            color: colors.$navy;
+
+            .support{
+                color: colors.$gray;
+            }
+        }
+
+        .most-card{
+            @include card.init($bg-color: colors.$purple);
+            color: colors.$white;
+
+            .support {
+                color: colors.$gray2;
+            }
+
+            .btn-primary{
+                background-color: colors.$aqua;
+            }
+        }
+
+        .name{
+            font-weight: map-get($map: typography.$font-weights, $key: "medium");
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .price{
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .support{
+            margin-bottom: 40px;
+            font-size: .95rem;
+            line-height: 1.3;
+        }
+
+        .item-benefit{
+            display: flex;
+            margin-bottom: 15px;
+
+            p{
+                margin-left: 8px;
+            }
+        }
+
+        .buttons{
+            margin-top: 45px;   
+            .btn-primary {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,3 +1,194 @@
 /* === COLOR VARIABELS === */
+/* === RESET CSS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* === REUSABLE CLASS === */
+.title {
+  color: #02044A;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #9B9CB7;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.btn-primary {
+  background-color: #563AD6;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background-color: #EAEAF4;
+  color: #777790;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: 1124px;
+  width: 100%;
+  margin: auto;
+}
+
+/* === NAVBAR === */
+.navbar {
+  margin-top: 30px;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: initial;
+  flex-direction: row;
+}
+.navbar-items {
+  display: flex;
+}
+.navbar-item {
+  margin: 0 1.35rem;
+}
+.navbar-link {
+  color: #02044A;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.navbar-link.active {
+  font-weight: 500;
+  color: #563AD6;
+}
+
+/* === SALES === */
+.sales {
+  padding: 50px 0;
+}
+.sales .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 1.5rem;
+}
+.sales .title {
+  margin-top: -15px;
+}
+.sales .description {
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+.sales .btn-primary {
+  margin-right: 15px;
+}
+
+/* === BRAND === */
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+  flex-direction: row;
+  padding: 45px 0;
+}
+.brand-logos {
+  width: 50%;
+}
+
+/* === PRICING === */
+.pricing {
+  background-color: #F9F9FB;
+  padding: 70px 0;
+}
+.pricing-header {
+  display: flex;
+  justify-content: initial;
+  align-items: center;
+  flex-direction: column;
+}
+.pricing .description {
+  text-align: center;
+}
+.pricing .cards {
+  width: 53%;
+  margin: 80px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: initial;
+  flex-direction: row;
+}
+.pricing .cards .basic-card {
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 1.2rem;
+  height: fit-content;
+  color: #02044A;
+}
+.pricing .cards .basic-card .support {
+  color: #9B9CB7;
+}
+.pricing .cards .most-card {
+  background-color: #563AD6;
+  padding: 35px;
+  border-radius: 1.2rem;
+  height: fit-content;
+  color: #fff;
+}
+.pricing .cards .most-card .support {
+  color: #B19FFF;
+}
+.pricing .cards .most-card .btn-primary {
+  background-color: #3ABAD6;
+}
+.pricing .cards .name {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.pricing .cards .price {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+.pricing .cards .support {
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+.pricing .cards .item-benefit {
+  display: flex;
+  margin-bottom: 15px;
+}
+.pricing .cards .item-benefit p {
+  margin-left: 8px;
+}
+.pricing .cards .buttons {
+  margin-top: 45px;
+}
+.pricing .cards .buttons .btn-primary {
+  display: block;
+  text-align: center;
+}
 
 /*# sourceMappingURL=main.css.map */
