@@ -143,6 +143,8 @@ a {
   background-color: #fff;
   padding: 35px;
   border-radius: 1.2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   color: #02044A;
 }
@@ -153,6 +155,8 @@ a {
   background-color: #563AD6;
   padding: 35px;
   border-radius: 1.2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   color: #fff;
 }
@@ -191,4 +195,17 @@ a {
   text-align: center;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding-block: 1.5rem;
+}
+footer .footer__copy {
+  color: #02044A;
+  font-size: 0.875rem;
+}
+footer .footer__copy-link {
+  -webkit-text-decoration: 2px dashed underline #563AD6;
+          text-decoration: 2px dashed underline #563AD6;
+  text-underline-offset: 0.15rem;
+}/*# sourceMappingURL=main.css.map */

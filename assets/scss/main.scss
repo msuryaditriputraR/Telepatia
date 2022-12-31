@@ -5,33 +5,33 @@
 @use "components/card";
 
 /* === RESET CSS === */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: typography.$font;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* === REUSABLE CLASS === */
-.title{
+.title {
     color: colors.$navy;
     font-weight: map-get($map: typography.$font-weights, $key: "semibold");
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.description{
+.description {
     color: colors.$gray;
     font-size: 1.2rem;
     font-weight: map-get($map: typography.$font-weights, $key: "regular");
@@ -46,33 +46,34 @@ a{
 }
 
 /* === LAYOUT === */
-.container{
+.container {
     max-width: 1124px;
     width: 100%;
     margin: auto;
 }
 
 /* === NAVBAR === */
-.navbar{
+.navbar {
     margin-top: 30px;
+
     .container {
         @include layout.flex($justify: space-between);
     }
 
-    &-items{
+    &-items {
         display: flex;
     }
 
-    &-item{
+    &-item {
         margin: 0 1.35rem;
     }
 
-    &-link{
+    &-link {
         color: colors.$navy;
         font-weight: map-get($map: typography.$font-weights, $key: "regular");
         font-size: 1.2rem;
 
-        &.active{
+        &.active {
             font-weight: map-get($map: typography.$font-weights, $key: "medium");
             color: colors.$purple;
         }
@@ -80,65 +81,67 @@ a{
 }
 
 /* === SALES === */
-.sales{
+.sales {
     padding: 50px 0;
+
     .container {
         @include layout.flex($justify: space-between, $align: center);
         padding-right: 1.5rem;
     }
 
-    .title{
+    .title {
         margin-top: -15px;
     }
 
-   .description{
-       margin-bottom: 40px;
-       line-height: 1.5;
-   }
+    .description {
+        margin-bottom: 40px;
+        line-height: 1.5;
+    }
 
-   .btn-primary{
+    .btn-primary {
         margin-right: 15px;
-   }
+    }
 }
 
 /* === BRAND === */
-.brand{
+.brand {
     @include layout.flex($justify: center);
     padding: 45px 0;
 
-    &-logos{
+    &-logos {
         width: 50%;
     }
 }
 
 /* === PRICING === */
-.pricing{
+.pricing {
     background-color: colors.$lilpur;
     padding: 70px 0;
-    &-header{
+
+    &-header {
         @include layout.flex($align: center, $direction: column);
     }
 
-    .description{
+    .description {
         text-align: center;
     }
 
-    .cards{
+    .cards {
         width: 53%;
         margin: 80px auto 0;
 
         @include layout.flex($justify: space-between);
 
-        .basic-card{
+        .basic-card {
             @include card.init($bg-color: colors.$white);
             color: colors.$navy;
 
-            .support{
+            .support {
                 color: colors.$gray;
             }
         }
 
-        .most-card{
+        .most-card {
             @include card.init($bg-color: colors.$purple);
             color: colors.$white;
 
@@ -146,43 +149,60 @@ a{
                 color: colors.$gray2;
             }
 
-            .btn-primary{
+            .btn-primary {
                 background-color: colors.$aqua;
             }
         }
 
-        .name{
+        .name {
             font-weight: map-get($map: typography.$font-weights, $key: "medium");
             font-size: 1rem;
             margin-bottom: 6px;
         }
 
-        .price{
+        .price {
             font-size: 2.2rem;
             margin-bottom: 12px;
         }
 
-        .support{
+        .support {
             margin-bottom: 40px;
             font-size: .95rem;
             line-height: 1.3;
         }
 
-        .item-benefit{
+        .item-benefit {
             display: flex;
             margin-bottom: 15px;
 
-            p{
+            p {
                 margin-left: 8px;
             }
         }
 
-        .buttons{
-            margin-top: 45px;   
+        .buttons {
+            margin-top: 45px;
+
             .btn-primary {
                 display: block;
                 text-align: center;
             }
+        }
+    }
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding-block: 1.5rem;
+
+    .footer__copy {
+        color: colors.$navy;
+        font-size: .875rem;
+
+        &-link {
+            text-decoration: 2px dashed underline colors.$purple;
+            text-underline-offset: .15rem;
         }
     }
 }
